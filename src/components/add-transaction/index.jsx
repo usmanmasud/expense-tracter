@@ -1,9 +1,9 @@
 import { Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Radio, RadioGroup } from '@chakra-ui/react'
 import React from 'react'
 
-export default function TransactionForm() {
+export default function TransactionForm({ onClose, isOpen }) {
     return (
-        <Modal>
+        <Modal isOpen={isOpen} onClose={onClose}>
             <form>
                 <ModalOverlay />
                 <ModalContent>
@@ -32,7 +32,7 @@ export default function TransactionForm() {
                         </RadioGroup>
                     </ModalBody>
                     <ModalFooter>
-                        <Button mr={'4'}>Cancel</Button>
+                        <Button mr={'4'} onClick={onClose} >Cancel</Button>
                         <Button>Add</Button>
                     </ModalFooter>
                 </ModalContent>
