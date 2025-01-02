@@ -22,7 +22,7 @@ export default function TransactionForm({ onClose, isOpen }) {
     function handleFormChange(event) {
         setFormData({
             ...formData,
-            [event.target.name]: event.target.name,
+            [event.target.name]: event.target.value,
         });
     }
 
